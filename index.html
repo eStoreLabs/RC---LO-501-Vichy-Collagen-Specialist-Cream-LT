@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vichy</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Spartan:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #es-vichy.es-vichy {
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 0;
+        color: #2b2a29;
+        font-family: 'Spartan', sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 1.2;
+        max-width: 850px;
+        overflow: hidden;
+      }
+      #es-vichy.es-vichy * {
+        box-sizing: border-box;
+      }
+      #es-vichy.es-vichy h2,
+      #es-vichy.es-vichy h3,
+      #es-vichy.es-vichy h4,
+      #es-vichy.es-vichy h5 {
+        color: #111;
+        font-family: 'Spartan', sans-serif;
+      }
+      #es-vichy.es-vichy .es-kv {
+        background: #fff;
+      }
+      #es-vichy.es-vichy .es-kv__images {
+        padding: 0 16px;
+        padding-top: 37px;
+        padding-bottom: 20px;
+      }
+      #es-vichy.es-vichy .es-kv__logo {
+        margin-bottom: 20px;
+        opacity: 0;
+        -webkit-animation: slidedown 0.6s ease forwards;
+        animation: slidedown 0.6s ease forwards;
+      }
+      #es-vichy.es-vichy .es-kv__claim {
+        margin-bottom: 32px;
+        opacity: 0;
+        -webkit-animation: slidedown 0.6s ease forwards;
+        animation: slidedown 0.6s ease forwards;
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+      }
+      #es-vichy.es-vichy .es-kv__packshot {
+        opacity: 0;
+        -webkit-animation: slidedown 0.6s ease forwards;
+        animation: slidedown 0.6s ease forwards;
+        -webkit-animation-delay: 0.6s;
+        animation-delay: 0.6s;
+      }
+      #es-vichy.es-vichy .es-kv__disc {
+        font-size: 7.5px;
+        margin: 0;
+        padding: 0;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        text-align: center;
+      }
+      #es-vichy.es-vichy .es-kv__photo {
+        position: relative;
+      }
+      #es-vichy.es-vichy .es-kv__img {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+      }
+      #es-vichy.es-vichy .es-kv__img--photo {
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+      #es-vichy.es-vichy .es-kv__img--1 {
+        position: relative;
+        top: 11px;
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+      }
+      #es-vichy.es-vichy .es-kv__content {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 69px;
+        background: url('assets/images/photo.jpg') center/cover no-repeat;
+        min-height: 400px;
+      }
+      #es-vichy.es-vichy .es-kv__title {
+        padding: 32px 24px;
+        color: #fff;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: right;
+        opacity: 0;
+        -webkit-animation: slideright 0.6s ease forwards;
+        animation: slideright 0.6s ease forwards;
+        -webkit-animation-delay: 0.9s;
+        animation-delay: 0.9s;
+      }
+      #es-vichy.es-vichy .es-info {
+        margin: 0 auto;
+        margin-bottom: 32px;
+        padding: 32px 16px;
+        max-width: 750px;
+      }
+      #es-vichy.es-vichy .es-info__border {
+        position: relative;
+        margin-bottom: 32px;
+        padding: 24px 16px;
+      }
+      #es-vichy.es-vichy .es-info__border::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: url('assets/images/border-1.png');
+      }
+      #es-vichy.es-vichy .es-info__border::after {
+        position: absolute;
+        top: auto;
+        right: 0;
+        content: url('assets/images/border-2.png');
+      }
+      #es-vichy.es-vichy .es-info__title {
+        margin-bottom: 32px;
+        font-size: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      #es-vichy.es-vichy .es-info__title span {
+        display: block;
+        font-weight: 200;
+      }
+      #es-vichy.es-vichy .es-info__desc {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        text-align: center;
+        line-height: 1.4;
+      }
+      #es-vichy.es-vichy .es-info__desc strong {
+        text-transform: uppercase;
+      }
+      #es-vichy.es-vichy .es-info__disclaimer {
+        margin-top: 16px;
+        font-size: 7.5px;
+        text-align: center;
+      }
+      #es-vichy.es-vichy .es-info__text {
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+      }
+      #es-vichy.es-vichy .es-info__img {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+      }
+      #es-vichy.es-vichy .es-info__features {
+        margin: 0 -8px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      #es-vichy.es-vichy .es-info__single {
+        padding: 0 8px;
+        max-width: 250px;
+      }
+      #es-vichy.es-vichy .es-info__single:not(:last-child) {
+        margin-bottom: 32px;
+      }
+      #es-vichy.es-vichy .es-info__icon {
+        margin-bottom: 16px;
+      }
+      #es-vichy.es-vichy .es-use {
+        margin-bottom: 32px;
+        padding: 0 60px;
+        background: url('assets/images/bg-1.jpg') no-repeat;
+        background-position: 8% bottom;
+        background-size: cover;
+        min-height: 720px;
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+      }
+      #es-vichy.es-vichy .es-use__content {
+        margin: 0 auto;
+        max-width: 730px;
+      }
+      #es-vichy.es-vichy .es-use__title {
+        font-weight: 700;
+        font-size: 22px;
+        text-transform: uppercase;
+      }
+      #es-vichy.es-vichy .es-use__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      #es-vichy.es-vichy .es-use__item {
+        position: relative;
+        margin-bottom: 16px;
+        padding-left: 24px;
+      }
+      #es-vichy.es-vichy .es-use__item::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #e03e2f;
+        content: '●';
+      }
+      #es-vichy.es-vichy .es-banner {
+        margin-bottom: 64px;
+      }
+      #es-vichy.es-vichy .es-banner__border {
+        margin-bottom: 16px;
+        padding: 32px 16px;
+        background: linear-gradient(45deg, #ba2d24, #df3e2f);
+      }
+      #es-vichy.es-vichy .es-banner__title {
+        margin-bottom: 24px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.4;
+      }
+      #es-vichy.es-vichy .es-banner__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      #es-vichy.es-vichy .es-banner__single {
+        width: 220px;
+        padding: 0 16px;
+      }
+      #es-vichy.es-vichy .es-banner__single:first-child {
+        margin-bottom: 24px;
+      }
+      #es-vichy.es-vichy .es-banner__text {
+        color: #fff;
+        font-weight: 700;
+        font-size: 12px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      #es-vichy.es-vichy .es-banner__text--number {
+        position: relative;
+        top: 15px;
+        font-weight: 700;
+        font-size: 30px;
+        font-size: 40px;
+        line-height: 1;
+      }
+      #es-vichy.es-vichy .es-banner__text--word {
+        font-weight: normal;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+      #es-vichy.es-vichy .es-banner__text--percent {
+        font-weight: normal;
+        font-size: 33px;
+        vertical-align: top;
+      }
+      #es-vichy.es-vichy .es-banner__disclaimer {
+        font-size: 9px;
+        margin: 0;
+        padding: 0;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        text-align: center;
+      }
+      #es-vichy.es-vichy .es-ingr {
+        padding: 0 16px;
+      }
+      #es-vichy.es-vichy .es-ingr__title {
+        margin-bottom: 32px;
+        font-weight: 700;
+        font-size: 22px;
+        text-align: center;
+      }
+      #es-vichy.es-vichy .es-ingr__container {
+        margin: 0 -24px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 12px;
+      }
+      #es-vichy.es-vichy .es-ingr__single {
+        padding: 0 12px;
+        max-width: 246px;
+      }
+      #es-vichy.es-vichy .es-ingr__single:not(:last-child) {
+        margin-bottom: 32px;
+      }
+      #es-vichy.es-vichy .es-ingr__image {
+        position: relative;
+        margin-bottom: 24px;
+      }
+      #es-vichy.es-vichy .es-ingr__img {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+      }
+      #es-vichy.es-vichy .es-ingr__text {
+        font-size: 12.3px;
+        margin: 0;
+        padding: 0;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        text-align: center;
+      }
+      #es-vichy.es-vichy .es-ingr__disc {
+        margin: 0 auto;
+        margin-top: 10px;
+        display: block;
+        font-size: 7.5px;
+        text-align: center;
+      }
+      #es-vichy.es-vichy .es-ingr__label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        padding: 14px 16px;
+        color: inherit;
+        font-family: inherit;
+        font-weight: 700;
+        line-height: inherit;
+        background: rgba(255, 255, 255, 0.66);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      #es-vichy.es-vichy .es-benefits {
+        padding: 0 16px;
+        background: url('assets/images/bg-3.jpg') no-repeat;
+        background-position: right bottom;
+        min-height: 900px;
+      }
+      #es-vichy.es-vichy .es-benefits__title {
+        margin-bottom: 40px;
+        font-weight: 700;
+        font-size: 22px;
+        text-align: center;
+      }
+      #es-vichy.es-vichy .es-benefits__container {
+        margin: 0 -16px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 30px;
+      }
+      #es-vichy.es-vichy .es-benefits__single {
+        padding: 0 8px;
+        max-width: 160px;
+      }
+      #es-vichy.es-vichy .es-benefits__single:not(:last-child) {
+        margin-bottom: 32px;
+      }
+      #es-vichy.es-vichy .es-benefits__img {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+      }
+      #es-vichy.es-vichy .es-benefits__icon {
+        margin-bottom: 16px;
+      }
+      #es-vichy.es-vichy .es-benefits__text {
+        font-size: 13px;
+        text-align: center;
+      }
+      #es-vichy.es-vichy .es-rev-banner {
+        margin-bottom: 64px;
+      }
+      #es-vichy.es-vichy .es-rev-banner__border {
+        margin-bottom: 32px;
+        background: linear-gradient(45deg, #ba2d24, #df3e2f);
+      }
+      #es-vichy.es-vichy .es-rev-banner__content {
+        padding: 32px 40px;
+        max-width: 100%;
+      }
+      #es-vichy.es-vichy .es-rev-banner__title {
+        margin-bottom: 24px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 22px;
+        text-transform: uppercase;
+        line-height: 1.4;
+      }
+      #es-vichy.es-vichy .es-rev-banner__list {
+        margin: 0;
+        padding: 0;
+        padding-left: 16px;
+      }
+      #es-vichy.es-vichy .es-rev-banner__item {
+        color: #fff;
+        font-size: 12px;
+      }
+      #es-vichy.es-vichy .es-rev-banner__item:not(:last-child) {
+        margin-bottom: 16px;
+      }
+      #es-vichy.es-vichy .es-cross {
+        padding: 0 16px;
+      }
+      #es-vichy.es-vichy .es-cross__title {
+        margin-bottom: 40px;
+        font-weight: 700;
+        font-size: 22px;
+        text-align: center;
+      }
+      #es-vichy.es-vichy .es-cross__container {
+        margin: 0 -16px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0 8px;
+        flex-flow: column;
+      }
+      #es-vichy.es-vichy .es-cross__img {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+        max-height: 400px;
+      }
+      #es-vichy.es-vichy .es-cross__img--desktop {
+        max-height: none;
+      }
+      #es-vichy.es-vichy .es-cross__single {
+        margin-bottom: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 8px;
+        max-width: 250px;
+        flex-flow: column;
+      }
+      #es-vichy.es-vichy .es-cross__single:hover .es-cross__icon {
+        transform: scale(1.2);
+      }
+      #es-vichy.es-vichy .es-cross__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: column;
+        flex-grow: 1;
+      }
+      #es-vichy.es-vichy .es-cross__subtitle {
+        margin-bottom: 16px;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 200;
+      }
+      #es-vichy.es-vichy .es-cross__subtitle strong {
+        display: block;
+      }
+      #es-vichy.es-vichy .es-cross__text {
+        margin-bottom: 16px;
+        font-size: 12px;
+        text-align: center;
+      }
+      #es-vichy.es-vichy .es-cross__link {
+        margin-bottom: 16px;
+        border: 1px solid #e03e2f;
+        padding: 6px 24px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 10px;
+        background: #e03e2f;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+      }
+      #es-vichy.es-vichy .es-cross__link:hover {
+        color: #e03e2f;
+        background: #fff;
+      }
+      #es-vichy.es-vichy .es-cross__photo--desktop {
+        display: none;
+      }
+      #es-vichy.es-vichy .es-cross__packshot {
+        position: relative;
+        z-index: 1;
+      }
+      #es-vichy.es-vichy .es-cross__packshot--1 {
+        max-width: 189px;
+      }
+      #es-vichy.es-vichy .es-cross__packshot--1::before {
+        position: absolute;
+        z-index: -1;
+        top: -50px;
+        left: -70px;
+        color: #ebebeb;
+        font-family: 'Roboto';
+        font-size: 230px;
+        content: '1';
+        line-height: 1;
+      }
+      #es-vichy.es-vichy .es-cross__packshot--2 {
+        max-width: 175px;
+      }
+      #es-vichy.es-vichy .es-cross__packshot--2::before {
+        position: absolute;
+        z-index: -1;
+        top: -68px;
+        left: -60px;
+        color: #ebebeb;
+        font-family: 'Roboto';
+        font-size: 230px;
+        content: '2';
+        line-height: 1;
+      }
+      #es-vichy.es-vichy .es-cross__packshot--3 {
+        max-width: 120px;
+      }
+      #es-vichy.es-vichy .es-cross__packshot--3::before {
+        position: absolute;
+        z-index: -1;
+        top: -50px;
+        left: -60px;
+        color: #ebebeb;
+        font-family: 'Roboto';
+        font-size: 230px;
+        content: '3';
+        line-height: 1;
+      }
+      @media screen and (min-width: 560px) {
+        #es-vichy.es-vichy .es-kv {
+          display: flex;
+        }
+        #es-vichy.es-vichy .es-kv__images {
+          display: flex;
+          justify-content: space-between;
+          flex-flow: column;
+          flex: 1;
+          flex-basis: 50%;
+        }
+        #es-vichy.es-vichy .es-kv__photo {
+          order: -1;
+          flex: 1;
+          flex-basis: 50%;
+        }
+        #es-vichy.es-vichy .es-kv__img--1 {
+          position: relative;
+          top: 11px;
+          margin: 0 auto;
+          display: block;
+          max-width: 100%;
+        }
+        #es-vichy.es-vichy .es-use {
+          min-height: 600px;
+        }
+        #es-vichy.es-vichy .es-benefits {
+          min-height: 742px;
+        }
+        #es-vichy.es-vichy .es-cross__photo--desktop {
+          display: block;
+        }
+        #es-vichy.es-vichy .es-cross__packshot {
+          display: none;
+        }
+        #es-vichy.es-vichy .es-cross__container {
+          flex-wrap: wrap;
+          align-items: stretch;
+          flex-flow: row;
+          -ms-flex-wrap: wrap;
+          -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+        }
+        #es-vichy.es-vichy .es-cross__packshot {
+          display: none;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        #es-vichy.es-vichy .es-kv {
+          margin-bottom: 32px;
+        }
+        #es-vichy.es-vichy .es-kv__content {
+          min-height: 425px;
+        }
+        #es-vichy.es-vichy .es-info__border {
+          margin-bottom: 100px;
+        }
+        #es-vichy.es-vichy .es-use {
+          margin-top: -260px;
+          margin-bottom: 64px;
+          display: flex;
+          align-items: center;
+          min-height: 608px;
+        }
+        #es-vichy.es-vichy .es-use__content {
+          margin-right: 25px;
+          margin-left: auto;
+          padding-top: 100px;
+          max-width: 320px;
+        }
+        #es-vichy.es-vichy .es-banner {
+          margin-bottom: 100px;
+          display: flex;
+          align-items: center;
+          background: url('assets/images/bg-2.jpg') no-repeat 120%;
+          min-height: 450px;
+        }
+        #es-vichy.es-vichy .es-banner__content {
+          margin-bottom: 16px;
+          max-width: 480px;
+        }
+        #es-vichy.es-vichy .es-banner__border {
+          margin-top: 100px;
+        }
+        #es-vichy.es-vichy .es-banner__single:first-child {
+          margin-bottom: 0;
+        }
+        #es-vichy.es-vichy .es-ingr__title {
+          margin-bottom: 64px;
+        }
+        #es-vichy.es-vichy .es-ingr__container {
+          margin: 0 auto;
+          justify-content: space-between;
+          padding: 0;
+          max-width: 730px;
+        }
+        #es-vichy.es-vichy .es-ingr__single {
+          padding: 0;
+          max-width: 235px;
+        }
+        #es-vichy.es-vichy .es-ingr__single:not(:last-child) {
+          margin-bottom: 0;
+        }
+        #es-vichy.es-vichy .es-rev-banner {
+          margin-bottom: 100px;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          background: url('assets/images/bg-4.jpg') no-repeat 47%;
+          min-height: 474px;
+        }
+        #es-vichy.es-vichy .es-rev-banner__border {
+          margin-right: 52px;
+          margin-bottom: 156px;
+        }
+        #es-vichy.es-vichy .es-rev-banner__content {
+          padding: 32px 54px;
+        }
+        #es-vichy.es-vichy .es-rev-banner__single:first-child {
+          margin-bottom: 0;
+        }
+        #es-vichy.es-vichy .es-cross__container {
+          justify-content: space-between;
+        }
+      }
+      @media screen and (min-width: 860px) {
+        #es-vichy.es-vichy .es-kv__content {
+          min-height: 470px;
+        }
+        #es-vichy.es-vichy .es-benefits {
+          display: flex;
+          align-items: center;
+          min-height: 602px;
+        }
+        #es-vichy.es-vichy .es-benefits__content {
+          margin-top: -140px;
+          margin-left: 35px;
+        }
+        #es-vichy.es-vichy .es-cross__single:nth-child(3) {
+          margin-right: 90px;
+        }
+      }
+
+      @-webkit-keyframes slidedown {
+        from {
+          opacity: 0;
+          transform: translateY(-32px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slidedown {
+        from {
+          opacity: 0;
+          transform: translateY(-32px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @-webkit-keyframes slideright {
+        from {
+          opacity: 0.3;
+          transform: translateX(-100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes slideright {
+        from {
+          opacity: 0.3;
+          transform: translateX(-100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="es-vichy" id="es-vichy">
+      <section class="es-kv">
+        <div class="es-kv__images">
+          <div class="es-kv__logo">
+            <img src="assets/images/logo.png" alt="" class="es-kv__img" />
+          </div>
+          <div class="es-kv__packshot">
+            <img
+              src="assets/images/packshot.png"
+              alt=""
+              class="es-kv__img--1"
+            />
+          </div>
+        </div>
+        <div class="es-kv__photo">
+          <div class="es-kv__content">
+            <h2 class="es-kv__title">
+              DAR VEIKSMINGIAU <br />
+              KOREGUOJA ODOS<br />
+              KOLAGENO PRARADIMO<br />
+              POŽYMIUS
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="es-info">
+        <div class="es-info__border">
+          <h3 class="es-info__title">
+            <span
+              >AR ŽINOTE, KAD SU AMŽIUMI KOLAGENO GAMYBA <br />ODOJE LĖTĖJA NET
+              75 %?</span
+            >
+            IMKITĖS VEIKSMŲ JAU DABAR!
+          </h3>
+          <p class="es-info__desc">
+            Atraskite patobulintos formulės kremą nuo raukšlių
+            <strong>LIFTACTIV COLLAGEN SPECIALIST,</strong> kuriame yra 3 kartus
+            daugiau kolageno peptidų*, 4 % niacinamido, vitamino Cg, kuris dar
+            veiksmingiau sumažina odos senėjimo požymius, atsiradusius dėl
+            kolageno praradimo.
+          </p>
+          <p class="es-info__disclaimer">*lyginant su ankstesne formule</p>
+        </div>
+        <div class="es-info__features">
+          <div class="es-info__single">
+            <div class="es-info__icon">
+              <img src="assets/images/check.png" class="es-info__img" alt="" />
+            </div>
+            <p class="es-info__text">
+              Formulė įkvėpta neinvazinių <br />
+              estetinės medicinos procedūrų
+            </p>
+          </div>
+          <div class="es-info__single">
+            <div class="es-info__icon">
+              <img src="assets/images/check.png" class="es-info__img" alt="" />
+            </div>
+            <p class="es-info__text">
+              Kovoja su visais odos <br />
+              senėjimo požymiais: <br />
+              raukšlėmis, stangrumo <br />
+              praradimu, pigmentacija
+            </p>
+          </div>
+          <div class="es-info__single">
+            <div class="es-info__icon">
+              <img src="assets/images/check.png" class="es-info__img" alt="" />
+            </div>
+            <p class="es-info__text">
+              Aksominės tekstūros, <br />
+              puikiai tinka prieš makiažą
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="es-use">
+        <div class="es-use__content">
+          <h3 class="es-use__title">NAUDOKITE, JEI</h3>
+          <ul class="es-use__list">
+            <li class="es-use__item">turite matomų raukšlių</li>
+            <li class="es-use__item">
+              Jūsų oda tapo suglebusi, o veido kontūrai neryškūs
+            </li>
+            <li class="es-use__item">
+              oda prarado spindesį, o jos atspalvis yra netolygus
+            </li>
+            <li class="es-use__item">
+              norite apsaugoti odą nuo neigiamo išorinių veiksnių poveikio
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="es-banner">
+        <div class="es-banner__content">
+          <div class="es-banner__border">
+            <h3 class="es-banner__title">
+              VEIKSMINGUMAS MAŽINANT RAUKŠLES <br />
+              PATVIRTINTAS KLINIKINIAIS TYRIMAIS
+            </h3>
+            <div class="es-banner__container">
+              <div class="es-banner__single">
+                <p class="es-banner__text es-banner__text--number">
+                  96<span class="es-banner__text--percent">%</span>
+                </p>
+                <p class="es-banner__text">
+                  MATOMAS RAUKŠLIŲ <br />
+                  SUMAŽĖJIMAS
+                </p>
+              </div>
+              <div class="es-banner__single">
+                <p class="es-banner__text es-banner__text--number">
+                  +52,5<span class="es-banner__text--percent">%</span>
+                </p>
+                <p class="es-banner__text">PAGERINTAS ELASTINGUMAS**</p>
+              </div>
+            </div>
+          </div>
+          <p class="es-banner__disclaimer">
+            <sup>*</sup>Klinikinis tyrimas, 58 moterys, po 8 sav.
+          </p>
+          <p class="es-banner__disclaimer">
+            <sup>**</sup>Klinikinis tyrimas, 40 moterų (40–65 m.), po 4 val.
+          </p>
+        </div>
+      </section>
+
+      <section class="es-ingr">
+        <h3 class="es-ingr__title">
+          STIPRI FORMULĖ SU VEIKLIOSIOMIS MEDŽIAGOMIS
+        </h3>
+        <div class="es-ingr__container">
+          <div class="es-ingr__single">
+            <div class="es-ingr__image">
+              <img src="assets/images/ingr-1.png" alt="" class="es-ingr__img" />
+              <p class="es-ingr__label">3X DAUGIAU KOLAGENO PEPTIDŲ*</p>
+            </div>
+            <p class="es-ingr__text">
+              Trumpi aminorūgščių fragmentai, mažinantys odos kolageno praradimo
+              požymius, tokius kaip raukšlės ir stangrumo sumažėjimas.
+            </p>
+            <span class="es-ingr__disc">*lyginant su ankstesne formule</span>
+          </div>
+          <div class="es-ingr__single">
+            <div class="es-ingr__image">
+              <img src="assets/images/ingr-2.png" alt="" class="es-ingr__img" />
+              <p class="es-ingr__label">VITAMINAS CG</p>
+            </div>
+            <p class="es-ingr__text">
+              Antioksidantas, kuris skaistina <br />odą ir suvienodina jos
+              atspalvį.
+            </p>
+          </div>
+          <div class="es-ingr__single">
+            <div class="es-ingr__image">
+              <img src="assets/images/ingr-3.png" alt="" class="es-ingr__img" />
+              <p class="es-ingr__label">NIACINAMIDAS</p>
+            </div>
+            <p class="es-ingr__text">
+              Išlygina odos atspalvį ir apsaugo nuo pigmentinių dėmių
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="es-benefits">
+        <div class="es-benefits__content">
+          <h3 class="es-benefits__title">GERAI TOLERUOJAMAS</h3>
+          <div class="es-benefits__container">
+            <div class="es-benefits__single">
+              <div class="es-benefits__icon">
+                <img
+                  src="assets/images/icon-1.png"
+                  alt=""
+                  class="es-benefits__img"
+                />
+              </div>
+              <p class="es-benefits__text">Hipoalerginė formulė</p>
+            </div>
+            <div class="es-benefits__single">
+              <div class="es-benefits__icon">
+                <img
+                  src="assets/images/icon-2.png"
+                  alt=""
+                  class="es-benefits__img"
+                />
+              </div>
+              <p class="es-benefits__text">
+                Išbandyta prižiūrint dermatologams
+              </p>
+            </div>
+            <div class="es-benefits__single">
+              <div class="es-benefits__icon">
+                <img
+                  src="assets/images/icon-3.png"
+                  alt=""
+                  class="es-benefits__img"
+                />
+              </div>
+              <p class="es-benefits__text">Tinka jautriai odai</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="es-rev-banner">
+        <div class="es-rev-banner__border">
+          <div class="es-rev-banner__content">
+            <h3 class="es-rev-banner__title">NAUDOJIMAS</h3>
+            <ol class="es-rev-banner__list">
+              <li class="es-rev-banner__item">
+                Nuvalykite ir nusausinkite veido odą.
+              </li>
+              <li class="es-rev-banner__item">
+                Tolygiai paskirstykite gaminį švelniai <br />
+                masažuodami veidą.
+              </li>
+              <li class="es-rev-banner__item">
+                Tepkite kiekvieną rytą, atskirai arba <br />
+                po serumo.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="es-cross">
+        <h3 class="es-cross__title">ODOS PRIEŽIŪRA</h3>
+        <div class="es-cross__photo es-cross__photo--desktop">
+          <img
+            src="assets/images/packshots.jpg"
+            alt=""
+            class="es-cross__img es-cross__img--desktop"
+          />
+        </div>
+        <div class="es-cross__container">
+          <div class="es-cross__single">
+            <div class="es-cross__packshot es-cross__packshot--1">
+              <img
+                src="assets/images/cross-1.png"
+                alt=""
+                class="es-cross__img"
+              />
+            </div>
+            <h4 class="es-cross__subtitle">
+              <strong>LIFTACTIV SPECIALIST</strong> B3 SERUMAS
+            </h4>
+            <div class="es-cross__wrapper">
+              <p class="es-cross__text">
+                Koncentruotas serumas, mažinantis spalvos pakitimus ir
+                raukšles,<br />
+                su 5 % niacinamido.
+              </p>
+              <a href="#" target="_blank" class="es-cross__link">tutvu</a>
+            </div>
+          </div>
+          <div class="es-cross__single">
+            <div class="es-cross__packshot es-cross__packshot--2">
+              <img
+                src="assets/images/cross-2.png"
+                alt=""
+                class="es-cross__img"
+              />
+            </div>
+            <h4 class="es-cross__subtitle">
+              <strong>LIFTACTIV</strong> COLLAGEN SPECIALIST
+            </h4>
+            <div class="es-cross__wrapper">
+              <p class="es-cross__text">
+                Dieninis kremas, <br />koreguojantis odos kolageno praradimo
+                požymius.
+              </p>
+              <a href="#l" target="_blank" class="es-cross__link">tutvu</a>
+            </div>
+          </div>
+          <div class="es-cross__single">
+            <div class="es-cross__packshot es-cross__packshot--3">
+              <img
+                src="assets/images/cross-3.png"
+                alt=""
+                class="es-cross__img"
+              />
+            </div>
+            <h4 class="es-cross__subtitle">
+              <strong>CAPITAL SOLEIL</strong> UV-AGE DAILY SPF 50+
+            </h4>
+            <div class="es-cross__wrapper">
+              <p class="es-cross__text">
+                Nuo fotosenėjimo saugantis fluidas su pažangia apsauga nuo UVA
+                ir UVB spindulių.
+              </p>
+              <a href="#" target="_blank" class="es-cross__link">tutvu</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
